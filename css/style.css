@@ -1,37 +1,48 @@
-/* PADRÃO CSS */
-*
-{
+/* --- PADRÃO CSS --- */
+
+* {
     box-sizing: border-box;
+    margin: 0;
 }
 
-body{
+body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
 html {
-    font-size: 10px; /* faz o reset do rem */
+    font-size: 10px;
+    /* faz o reset do rem */
 }
 
-/* LAYOUT */
+
+/* --- LAYOUT --- */
 
 .container {
     max-width: 1080px;
     margin: 0 auto;
 }
+
 a {
     text-decoration: none;
 }
+
 h3 {
     font-size: 2.5rem;
 }
+
 p {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
 }
 
-.banner{
+
+/* --- HEADER ---  */
+
+.banner {
     color: #48d1cc;
     background-image: url(../img/banner-img.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    width: 100%;
     height: 600px;
     color: white;
     display: flex;
@@ -40,22 +51,23 @@ p {
     text-shadow: 2px 2px 2px black;
     text-align: center;
     filter: opacity(85%);
-    }
+}
 
 .banner__titulo {
-size: 40px;
-text-align: center;
-font-size: 3rem;
+    size: 40px;
+    text-align: center;
+    font-size: 3rem;
+    padding: 0 0 1rem 0;
 }
 
 .banner__subtitulo {
     text-align: center;
     font-size: 2rem;
+    padding: 0 0 5rem 0;
 }
 
-a{
-    text-decoration: none;
-}
+
+/* --- BOTOES --- */
 
 .btn {
     border-radius: 3rem;
@@ -65,79 +77,203 @@ a{
     font-weight: bold;
 }
 
-.btn-branco {
+#btn-azul {
     color: white;
-    background-color:#48d1cc;
+    background-color: #48d1cc;
 }
 
-.btn-roxo {
+#btn-azul:hover,
+btn-azul:focus {
+    background-color: #00CED1;
+    transform: translateY(-1rem);
+    box-shadow: 0 1.5rem 1.5rem rgb(22, 49, 49);
+}
+
+#btn-branco {
     color: #48d1cc;
     border: 1px solid #48d1cc;
 }
 
-/* SEÇÃO SOBRE */
-.sobre{
-    display: flex;
-    justify-content: space-around;
+#btn-branco:hover,
+btn-branco:focus {
+    background-color: #E0FFFF;
+    transform: translateY(-1rem);
+    box-shadow: 0 1.5rem 1.5rem rgb(83, 194, 194);
+}
+
+.btn-rede:hover {
+    background-color: #00CED1;
+    border-radius: 5rem;
+}
+
+
+/* --- SECAO SOBRE --- */
+
+.sobre-juliana {
+    width: 100%;
+    text-align: center;
+    padding: 2.5rem;
+}
+
+.sobre-descricao {
+    width: 100%;
 }
 
 .sobre__titulo {
-    font-size: 3rem;
     color: black;
+    text-align: center;
+    padding: 2rem 2rem;
 }
 
-.sobre-descricao, .sobre-habilidades {
-    width: 40%;
-    display: inline-block;
-    line-height: 1.5;
-}
-
-.sobre-descricao__destaque, .sobre-habilidades__titulo {
-    font-size: 2rem;
+#titulo-sobre {
+    font-size: 2.8rem;
 }
 
 .sobre-descricao__destaque {
     font-weight: bold;
 }
 
-.sobre-habilidades__titulo {
-    margin-left: 120px;
+.sobre-descricao__texto {
+    padding: 0 0 2rem 0;
+    font-size: 1.8rem;
 }
 
-.sobre-habilidades {
-    margin-left: 10rem;
-    padding-left: 5rem;
+#texto-juliana {
+    line-height: 3rem;
+}
+
+.sobre-descricao__destaque,
+.sobre-habilidades__titulo {
+    font-size: 2rem;
+    line-height: 1.5;
+    padding: 1rem 0 1rem 0;
+}
+
+.habilidades-juliana {
+    width: 100%;
+    text-align: center;
 }
 
 .sobre-habilidades__lista {
-    padding-left: 5rem;
-    line-height: 2;
-    font-size: 1.6rem;
-    margin-left: 100px;
+    line-height: 2rem;
+    font-size: 1.8rem;
+    padding: 0 0 2rem 1rem;
 }
 
-/* REDES SOCIAIS */
+
+/* --- REDES SOCIAIS --- */
+
 .redes-sociais__link {
     display: inline-block;
-    width: 17%;
-    background-color: #48d1cc;
-    padding: 2rem 0;
+    width: 5%;
+    padding: 3rem 12rem 2rem 0;
     margin: 0 1rem;
-    text-align: center;
     color: white;
-    justify-content: center;
+    justify-content: space-between;
+    font-size: 2px;
 }
 
-.redes-sociais__img, .redes-sociais__titulo {
-    margin-bottom: .5rem;
+.redes-sociais h3 {
+    font-size: 20px;
 }
 
-.footer {
-    margin-left: 500px;
+.redes-sociais p {
+    font-size: 15px;
 }
 
-/* DIREITOS AUTORAIS */
+.footer-container {
+    display: inline-block;
+    text-align: center;
+    background-color: #48d1cc;
+    width: 100%;
+    justify-content: space-between;
+}
+
+
+/* --- DIREITOS AUTORAIS --- */
+
 .footer-copyright {
     justify-content: center;
     text-align: center;
+    padding: 1.3rem;
+    background-color: #25a2a2;
+}
+
+.copyright {
+    font-size: 1.3rem;
+}
+
+
+/* --- MEDIA QUERIES --- */
+
+
+/* TABLET */
+
+@media (min-width: 768px) {
+    /* --- redes sociais ---  */
+    .redes-sociais__link {
+        display: inline-block;
+        width: 17%;
+        background-color: #48d1cc;
+        padding: 8rem 0;
+        margin: 0 1rem;
+        text-align: center;
+        color: white;
+        justify-content: center;
+    }
+    .redes-sociais__img,
+    .redes-sociais__titulo {
+        margin-bottom: .5rem;
+    }
+    .footer {
+        margin-left: 500px;
+    }
+}
+
+
+/* DESKTOP */
+
+@media (min-width: 1024px) {
+    /* --- secao sobre --- */
+    .sobre__titulo {
+        font-size: 2rem;
+        color: black;
+        text-align: left;
+    }
+    .sobre-juliana {
+        text-align: left;
+        display: flex;
+        justify-content: space-around;
+    }
+    .sobre-descricao,
+    .sobre-habilidades {
+        width: 40%;
+        display: inline-block;
+    }
+    .sobre-descricao__destaque {
+        text-align: center;
+    }
+    .sobre-habilidades__titulo {
+        margin-left: 120px;
+    }
+    .sobre-habilidades {
+        margin-left: 10rem;
+        padding-left: 5rem;
+    }
+    .sobre-habilidades__lista {
+        padding-left: 5rem;
+        margin-left: 200px;
+        text-align: left;
+    }
+    /* --- redes sociais ---  */
+    .footer-container {
+        background-color: white;
+    }
+    .redes-sociais__link {
+        background-color: #48d1cc;
+    }
+    /* --- direitos autorais --- */
+    .footer-copyright {
+        background-color: white;
+    }
 }
